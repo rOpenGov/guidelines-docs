@@ -7,6 +7,8 @@ Guidelines for psData and Associated Data Gathering Packages
 
 ## Authors
 
+From the [initial discussion](https://github.com/rOpenGov/psData/issues/5):
+
 * @christophergandrud
 * @antagomir
 * @briatte
@@ -16,15 +18,13 @@ Guidelines for psData and Associated Data Gathering Packages
 * @ouzor
 * @zmjones
 
-(A list of everyone cited in the discussion so far.)
-
 ## Metadata 
 
 A `psData` object is a data frame with an attribute that describes which columns are panel attributes, and how they are formatted. The package then offers functions to easily manipulate the data within these settings. Researchers who work with panel data or time series from different sources should find this package helpful to merge multiple variables together.
 
-> __Note__: the best way to implement this is probably using an [S4 class](http://cran.r-project.org/doc/Rnews/Rnews_2003-1.pdf). Similar approaches are found in the `reshape` and `data.table` packages (IIRC).
+> __Note__: the best way to implement this is probably using an [S4 class](http://cran.r-project.org/doc/Rnews/Rnews_2003-1.pdf), which allows to have a panel superclass and other classes to handle, e.g., triadic data. Similar approaches are found in the `reshape` and `data.table` packages (IIRC). Writing up the spec will provide a nice paper appendix.
 
-`psData` objects have the following metadata:
+`psData` objects carry the following metadata:
 
 - `panel` (the name of the primary panel variable)
 
@@ -34,7 +34,14 @@ A `psData` object is a data frame with an attribute that describes which columns
 
 - `date` (time format)
 
-For a country-year dataset, the `psData` object might have an attribute that reads like `panel = "cid", format = "iso3c", time = "year", format = "%Y"`.
+For a country-year dataset, the `psData` object might have an attribute that reads like
+
+	panel = "cid",
+	format = "iso3c",
+	time = "year",
+	format = "%Y"
+
+The convenience of the package comes from the data handling that can be performed for the user from these attributes:
 
 - The `format` attribute automatically understands country codes from the `countrycode` package (ISO-2, ISO-3, COW), as well as `region` with NUTS-2 and NUTS-3 codes. It would be a good idea to support Eurostat, OECD and U.S. states.
 - The `time` and `date` attributes follow the conventions of the `lubridate` package. Time variables called "date", "ymd", "year", "month" or "weekday" are automatically recognized and converted to `Date` format.
@@ -68,7 +75,7 @@ list(
 	...
 	# dyadic data design
 	panel = c("aggressor", "target"),
-	level = c("dyad1", "dyad2"),
+	level = c(aggressor = "dyad1", target = "dyad2"),
 	format = c(aggressor = "polity", target = "polity"),
 	time = c("year"),
 	date = c("%Y")
@@ -77,7 +84,7 @@ list(
 	...
 	# multilevel data design
 	panel = c("country", "region"),
-	level = c("level2", "level1"),
+	level = c(country = "level2", region = "level1"),
 	format = c(country = "eurostat", region = "nuts2"),
 	time = c("year"),
 	date = c("%Y")
@@ -149,17 +156,22 @@ The labels are explorable with `print`, `names` and `ps_find`, which searches fo
 
 ## Associated: core dependencies (Depends)
 
-* for data methods: `downloader`
-* for panel methods: `plyr` or `dplyr`
+* for data methods: `downloader` (see not above) and `stringr` (inevitably comes in handy at some point)
+* for panel methods: `plyr` or `dplyr`, and `reshape` or `reshape2` (for `melt`; `reshape` also has the very handy `sort_df`)
 * for plot methods (?): `ggplot2` or `lattice`
 
-> __Note__: the package vignettes could show how to use the package for mixed effects or survival analysis. It should be pretty easy to code a Reinhart and Rogoff vignette :)
+> __Note__: the package vignettes could show how to use the package for mixed effects or survival analysis. It should be pretty easy to code a Reinhart and Rogoff vignette. It would be great to have one on comparative election results, for instance (Cas Mudde-style), or on welfare regimes, or on varities of capitalism.
 
 ## Associated: data gathering packages (Suggests)
 
-* `rQog`
-* `WDI`
-* `FAOSTAT` (?)
+* `Quandl` (many quarterly series)
+* `rQog` (country-year, region, some split-state exceptions)
+* `WDI` (country-year, perhaps quarterly)
+* `FAOSTAT` (country-year?)
+* OECD (TODO, SDMX, country-year)
+* Eurostat (TODO, SDMX, country-year, region)
+
+> __Note__: data methods for Eurostat and OECD will require the recently updated `rsdmx` package.
 
 ### Further transformations
 

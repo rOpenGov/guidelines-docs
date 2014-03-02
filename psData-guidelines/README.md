@@ -1,4 +1,4 @@
-![](psData_logo_v1.svg)
+![](psData_logo_v1.png)
 
 Guidelines for psData and Associated Data Gathering Packages
 ===

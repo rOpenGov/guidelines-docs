@@ -41,43 +41,120 @@
 <p><img src="data:image/png;base64,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" /></p>
 <h1 id="guidelines-for-psdata-and-associated-data-gathering-packages">Guidelines for psData and Associated Data Gathering Packages</h1>
 <p><strong>psData</strong> is an approach to gathering, cleaning, and merging <em>P</em>olitical <em>S</em>cience, <em>P</em>anel-<em>S</em>eries data. The approach will be implemented with the <a href="https://github.com/rOpenGov/psData">psData</a> <a href="http://www.r-project.org/">R</a> package and associated packages.</p>
-<h1 id="very-early-feel-free-to-editsuggest-changes">Very early, feel free to edit/suggest changes</h1>
-<h2 id="metadata">Metadata</h2>
-<p><code>psData</code> objects have the following metadata:</p>
+<h2 id="authors">Authors</h2>
+<p>From the <a href="https://github.com/rOpenGov/psData/issues/5">initial discussion</a>:</p>
 <ul>
-<li><p><code>panel</code></p></li>
+<li><span class="citation">(<span class="citeproc-not-found" data-reference-id="christophergandrud"><strong>???</strong></span>)</span></li>
+<li><span class="citation">(<span class="citeproc-not-found" data-reference-id="antagomir"><strong>???</strong></span>)</span></li>
+<li><span class="citation">(<span class="citeproc-not-found" data-reference-id="briatte"><strong>???</strong></span>)</span></li>
+<li><span class="citation">(<span class="citeproc-not-found" data-reference-id="jlehtoma"><strong>???</strong></span>)</span></li>
+<li><span class="citation">(<span class="citeproc-not-found" data-reference-id="leeper"><strong>???</strong></span>)</span></li>
+<li><span class="citation">(<span class="citeproc-not-found" data-reference-id="muuankarski"><strong>???</strong></span>)</span></li>
+<li><span class="citation">(<span class="citeproc-not-found" data-reference-id="ouzor"><strong>???</strong></span>)</span></li>
+<li><span class="citation">(<span class="citeproc-not-found" data-reference-id="zmjones"><strong>???</strong></span>)</span></li>
+</ul>
+<h2 id="metadata">Metadata</h2>
+<p>A <code>psData</code> object is a data frame with an attribute that describes which columns are panel attributes, and how they are formatted. The package then offers functions to easily manipulate the data within these settings. Researchers who work with panel data or time series from different sources in political science and related disciplines like economics should find this package helpful for gathering and merge multiple variables together.</p>
+<blockquote>
+<p><strong>Note</strong>: the best way to implement this is probably using an <a href="http://cran.r-project.org/doc/Rnews/Rnews_2003-1.pdf">S4 class</a>, which allows to have a panel superclass and other classes to handle, e.g., triadic data. Similar approaches are found in the <code>reshape</code> and <code>data.table</code> packages (IIRC). Writing up the spec will provide a nice paper appendix.</p>
+</blockquote>
+<p><code>psData</code> objects carry the following metadata:</p>
+<ul>
+<li><p><code>panel</code> (the name of the primary panel variable)</p></li>
 <li><p><code>format</code> (format of the panel ID)</p></li>
-<li><p><code>time</code></p></li>
+<li><p><code>time</code> (the name of the primary time marker)</p></li>
 <li><p><code>date</code> (time format)</p></li>
 </ul>
+<p>For a country-year data set, the <code>psData</code> object might have an attribute that reads like</p>
+<pre><code>panel = &quot;cid&quot;,
+format = &quot;iso3c&quot;,
+time = &quot;year&quot;,
+format = &quot;%Y&quot;</code></pre>
+<p>The convenience of the package comes from the data handling that can be performed for the user from these attributes:</p>
+<ul>
+<li>The <code>format</code> attribute automatically understands country codes from the <a href="https://github.com/vincentarelbundock/countrycode">countrycode</a> package (e.g. ISO-2, ISO-3, COW), as well as <code>region</code> with NUTS-2 and NUTS-3 codes. Production note: it would be a good idea to support Eurostat, OECD and U.S. states.</li>
+<li>The <code>time</code> and <code>date</code> attributes follow the conventions of the <a href="https://github.com/hadley/lubridate">lubridate</a> package. Time variables called “date”, “ymd”, “year”, “month” or “weekday” are automatically recognized and converted to <code>Date</code> format.</li>
+</ul>
+<p>If <code>psData</code> is to be flexible and portable, it would be a good idea to store the metadata in a list, to allow for several panel/time markers:</p>
+<p><code>{S} attr(data, &quot;psdata&quot;) = list(     # descriptive     name = &quot;Example country-year dataset&quot;,     # similar to R packages     meta = c(aut = &quot;John Doe &lt;john.doe@anon.edu&gt;&quot;, ctb = &quot;Jane Doe &lt;john.doe@anon.edu&gt;&quot;, uni = &quot;Anonymous University &lt;http://anon.edu/&gt;&quot;),     # versioning     date = &quot;2014-03-02&quot;,      version = &quot;1.0.0&quot;,     url = &quot;http://foo.bar/&quot;,     # data design     panel = c(&quot;cid&quot;, &quot;cname&quot;, &quot;ccodecow&quot;),     format = c(cid = &quot;iso3c&quot;, cname = &quot;name&quot;, ccodecow = &quot;cow&quot;),     time = c(&quot;year&quot;),     date = c(&quot;%Y&quot;)     )</code></p>
+<blockquote>
+<p><strong>Note</strong>: this needs to be further inspired by <a href="http://dataprotocols.org/data-packages/#required-fields">DataPackage</a>, and exportable to it, with the help of <code>rjson</code>, <code>RJSONIO</code> or <code>rjsonlite</code>.</p>
+</blockquote>
+<p>In this example, <code>cid</code> and <code>cname</code> code for the same (country) variable, but they could have specific roles set by an additional <code>level</code> attribute:</p>
+<p><code>{S} list(     ...     # dyadic data design     panel = c(&quot;aggressor&quot;, &quot;target&quot;),     level = c(aggressor = &quot;dyad1&quot;, target = &quot;dyad2&quot;),     format = c(aggressor = &quot;polity&quot;, target = &quot;polity&quot;),     time = c(&quot;year&quot;),     date = c(&quot;%Y&quot;)     ) list(     ...     # multilevel data design     panel = c(&quot;country&quot;, &quot;region&quot;),     level = c(country = &quot;level2&quot;, region = &quot;level1&quot;),     format = c(country = &quot;eurostat&quot;, region = &quot;nuts2&quot;),     time = c(&quot;year&quot;),     date = c(&quot;%Y&quot;)     )</code></p>
+<p>The <code>level</code> attribute, however, calls for a completely different class of functions than just the basic panel settings offered by default.</p>
 <h2 id="main-methods">Main methods</h2>
 <ol style="list-style-type: decimal">
 <li><code>get_data</code>: calls functions from associated data <em>getter</em> and <em>variable builder</em> packages packages to download and build a single data frame.</li>
 </ol>
 <ul>
 <li><p>Arguments/capabilities: <code>source</code> the data getter/builder package to call. <code>vars</code>: labels of specific variables to gather. <code>...</code> arguments to pass to the getter/builder function. <code>sha1</code> an sha1 hash to uniquely identify data sets. This could include specific URLs, or information idiosyncratic to a particular data set.</p></li>
-<li><p>Need to standardise how the data should look when it is returned from the getters/builders.</p></li>
+<li><p>Need to standardise how the data should look when it is returned from the getters/builders (missing values, variable names). Stata data sets should be imported with variable labels and factorized variables.</p></li>
 </ul>
+<blockquote>
+<p><strong>Note</strong>: a safe way to handle different downloads in different encodings on different systems has been, in my experience, using the <code>downloader</code> package with option <code>mode = &quot;wb&quot;</code>. It solves trouble with Windows using <code>wget</code> and others using <code>curl</code>, or other stuff like that.</p>
+</blockquote>
 <ol start="2" style="list-style-type: decimal">
-<li><code>panel_set</code>: cleans the panel-series data gathered by <code>get_data</code> and standardises it into a <code>psData</code> object.</li>
+<li><code>ps_set</code> (or <code>panel_set</code>): cleans the panel-series data gathered by <code>get_data</code> and standardises it into a <code>psData</code> object.</li>
 </ol>
 <ul>
-<li>Arguments/capabilities: needs arguments to set the panel and series formats. Needs arguments to specify how to deal with ‘tricky panels’, e.g. East/West Germany.</li>
+<li><p>Arguments/capabilities: needs arguments to set the panel and series formats.</p></li>
+<li><p>Needs arguments to specify how to deal with ‘tricky panels’, e.g. East/West Germany.</p></li>
+<li><p>Needs to detect non-unique panel items.</p></li>
 </ul>
+<p><code>ps_set</code> assigns the <code>psdata</code> class that overrides standard methods for</p>
+<ul>
+<li><code>print</code>, <code>head</code> and <code>tail</code> (shows a panel version of the dataset; see how <code>dplyr</code> does that)</li>
+<li><code>names</code> (shows names and variable labels if available, settable with <code>ps_label</code>)</li>
+<li><code>summarize</code> (see <code>xtdes</code> and <code>xtsum</code> in Stata)</li>
+<li><code>sample</code> (returns a panel-adjusted sample of the dataset) (The following may possibly be best implemented in a separate package)</li>
+<li><code>plot</code> (returns a <code>gpplot2</code> or <code>lattice</code> time series plot? with facets?)</li>
+<li><code>lag</code> and <code>lead</code> (overriden by <code>ps_shift</code>?)</li>
+<li><code>subset</code> and <code>merge</code> (overriden by <code>ps_subset</code> and <code>ps_merge</code>)</li>
+</ul>
+<blockquote>
+<p><strong>Note</strong>: the workhorse behind most operations that require aggregation is going to be either <code>plyr</code> or <code>dplyr</code>. Using the latter is much, <em>much</em> quicker in my experience. Indeed, at this stage of <code>dplyr</code>’s development it is good to use it to the exclusion of <code>plyr</code>.</p>
+</blockquote>
 <ol start="3" style="list-style-type: decimal">
-<li><code>ps_merge</code>: merges <code>psData</code> objects into a single object.</li>
+<li><code>panel_merge</code>: merges <code>psdata</code> objects into a single object.</li>
 </ol>
 <ul>
-<li>Arguments/capabilities: break if panel-series do not match. Arguments allowing the user to specify if all observations or just from one object are to be kept. Allow user to merge more than one object?</li>
+<li><p>Arguments/capabilities: break if panel-series do not match. Arguments allowing the user to specify if all observations or just from one object are to be kept.</p></li>
+<li><p>Needs to allow user to merge more than one object.</p></li>
 </ul>
-<h2 id="assocaited-data-gathering-packages">Assocaited data gathering packages</h2>
-<p>FILL IN LIST</p>
+<p><code>ps_merge</code> supports any number of data sets and creates an attribute that specifies the source of every variable:</p>
+<p><code>{S} list(     ...     panel = c(&quot;country&quot;),     format = c(country = &quot;iso3c&quot;),     time = c(&quot;year&quot;),     date = c(&quot;%Y&quot;),     # merged QOG/World Bank/OECD     vars = c(country = &quot;&quot;, var1 = &quot;qog&quot;, var2 = &quot;qog&quot;, var3 = &quot;wdi&quot;, var4 = &quot;oecd&quot;, ...)     )</code></p>
+<p>It should also be possible to label variables with <code>psData</code>, which makes sense for Stata users and anyone who needs to produce regression tables. The <code>read.dta</code> function can import labels, and other packages like <code>memisc</code> have their own methods. Using the method outlined above, variable labels can be stored as a simple vector set with <code>ps_label</code>:</p>
+<p><code>{S} list(     # variable sources     vars = c(country = &quot;&quot;, var1 = &quot;qog&quot;, var2 = &quot;qog&quot;, var3 = &quot;wdi&quot;, var4 = &quot;oecd&quot;, ...)     # variable labels     labs = c(country = &quot;Country name&quot;, var1 = &quot;var1&quot;, var2 = &quot;GDP per capita&quot;, var3 = &quot;Pop.&quot;, var4 = &quot;etc.&quot;, ...)     )</code></p>
+<p>The labels are explorable with <code>print</code>, <code>names</code> and <code>ps_find</code>, which searches for keywords through variable names and labels.</p>
+<h2 id="associated-core-dependencies-depends">Associated: core dependencies (Depends)</h2>
+<ul>
+<li>for data methods: <code>downloader</code> (see not above) and <code>stringr</code> (inevitably comes in handy at some point)</li>
+<li>for panel methods: <code>plyr</code> or <code>dplyr</code>, and <code>reshape</code> or <code>reshape2</code> (for <code>melt</code>; <code>reshape</code> also has the very handy <code>sort_df</code>)</li>
+<li>for plot methods (?): <code>ggplot2</code> or <code>lattice</code></li>
+</ul>
+<blockquote>
+<p><strong>Note</strong>: the package vignettes could show how to use the package for mixed effects or survival analysis. It should be pretty easy to code a Reinhart and Rogoff vignette. It would be great to have one on comparative election results, for instance (Cas Mudde-style), or on welfare regimes, or on varities of capitalism.</p>
+</blockquote>
+<h2 id="associated-data-gathering-packages-suggests">Associated: data gathering packages (Suggests)</h2>
+<ul>
+<li><code>Quandl</code> (many quarterly series)</li>
+<li><code>rQog</code> (country-year, region, some split-state exceptions)</li>
+<li><code>WDI</code> (country-year, perhaps quarterly)</li>
+<li><code>FAOSTAT</code> (country-year?)</li>
+<li>OECD (TODO, SDMX, country-year)</li>
+<li>Eurostat (TODO, SDMX, country-year, region)</li>
+</ul>
+<blockquote>
+<p><strong>Note</strong>: data methods for Eurostat and OECD will require the recently updated <code>rsdmx</code> package.</p>
+</blockquote>
 <h3 id="further-transformations">Further transformations</h3>
 <p>Transformations of <code>psData</code> beyond basic merging, such as creating dyadic data, lags, leads, plotting, and so on will be handled by a further package(s). A separate guideline document should be created to established a consistent framework.</p>
 <h2 id="style-guide">Style guide</h2>
 <h3 id="naming">Naming</h3>
 <ul>
-<li><p>Package names/object classes: modified camelCase where the first word is lower case and following words begin with a capital letter. Words are not separated. For example: ‘psData’.</p></li>
+<li><p>Package names: modified camelCase where the first word is lower case and following words begin with a capital letter. Words are not separated. For example: ‘psData’.</p></li>
+<li><p>Classes: all lowercase, no separators. For example&quot; <code>psdata</code>.</p></li>
 <li><p>Methods, function names, and arguments: all lowercase, with words separated by an underscore <code>_</code>. For example: ‘get_data’.</p></li>
 <li><p>Object names in documentation and object names internal to the functions: all lowercase, with words separated by periods. For example, ‘qog.data’.</p></li>
 </ul>

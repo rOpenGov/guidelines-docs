@@ -186,7 +186,7 @@ Transformations of `psData` beyond basic merging, such as creating dyadic data, 
 
 - Package names: modified camelCase where the first word is lower case and following words begin with a capital letter. Words are not separated. For example: 'psData'.
 
-- Classes: all lowercase, no separators. For example" `psdata`.
+- Classes: all lowercase, no separators. For example: `psdata`.
 
 - Methods, function names, and arguments: all lowercase, with words separated by an underscore `_`. For example: 'get_data'. 
 

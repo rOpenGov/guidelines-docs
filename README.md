@@ -5,5 +5,5 @@ This repository contains guideline documents for *rOpenGov* data frameworks and 
 
 This repository includes guidelines for:
 
-- [psData](psData-guidelines/README.md) *P*olitical *S*cience, *P*anel-*S*eries data gathering, cleaning, and merging.
-- General guidelines for [rOpenGov](ropengov-guidelines/about.md) project
+- General guidelines for the [rOpenGov](ropengov-guidelines/about.md) project.
+- [psData](psData-guidelines/README.md) Political Science, Panel-Series data gathering, cleaning, and merging.

@@ -46,7 +46,7 @@ The convenience of the package comes from the data handling that can be performe
 - The `format` attribute automatically understands country codes from the [countrycode](https://github.com/vincentarelbundock/countrycode) package (e.g. ISO-2, ISO-3, COW), as well as `region` with NUTS-2 and NUTS-3 codes. Production note: it would be a good idea to support Eurostat, OECD and U.S. states.
 - The `time` and `date` attributes follow the conventions of the [lubridate](https://github.com/hadley/lubridate) package. Time variables called "date", "ymd", "year", "month" or "weekday" are automatically recognized and converted to `Date` format.
 
-If `psData` is to be flexible and portable, it would be a good idea to store the metadata in a list, to allow for several panel/time markers:
+If `psData` is to be flexible and portable, it would be a good idea to store the metadata in a list, to allow for several panel-series markers:
 
 ```{S}
 attr(data, "psdata") = list(
@@ -67,6 +67,8 @@ attr(data, "psdata") = list(
 ```
 
 > __Note__: this needs to be further inspired by [DataPackage](http://dataprotocols.org/data-packages/#required-fields), and exportable to it, with the help of `rjson`, `RJSONIO` or `rjsonlite`.
+
+> __Note__: it would be desirable to add the capabilities to generate BibTex citations for the data sets, similar to `citation`. Ideally, you could run this on a `psdata` object that was composed of data merged from multiple sources and it would retun citations for each source.
 
 In this example, `cid` and `cname` code for the same (country) variable, but they could have specific roles set by an additional `level` attribute:
 

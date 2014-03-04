@@ -75,10 +75,13 @@ format = &quot;%Y&quot;</code></pre>
 <li>The <code>format</code> attribute automatically understands country codes from the <a href="https://github.com/vincentarelbundock/countrycode">countrycode</a> package (e.g. ISO-2, ISO-3, COW), as well as <code>region</code> with NUTS-2 and NUTS-3 codes. Production note: it would be a good idea to support Eurostat, OECD and U.S. states.</li>
 <li>The <code>time</code> and <code>date</code> attributes follow the conventions of the <a href="https://github.com/hadley/lubridate">lubridate</a> package. Time variables called “date”, “ymd”, “year”, “month” or “weekday” are automatically recognized and converted to <code>Date</code> format.</li>
 </ul>
-<p>If <code>psData</code> is to be flexible and portable, it would be a good idea to store the metadata in a list, to allow for several panel/time markers:</p>
+<p>If <code>psData</code> is to be flexible and portable, it would be a good idea to store the metadata in a list, to allow for several panel-series markers:</p>
 <p><code>{S} attr(data, &quot;psdata&quot;) = list(     # descriptive     name = &quot;Example country-year dataset&quot;,     # similar to R packages     meta = c(aut = &quot;John Doe &lt;john.doe@anon.edu&gt;&quot;, ctb = &quot;Jane Doe &lt;john.doe@anon.edu&gt;&quot;, uni = &quot;Anonymous University &lt;http://anon.edu/&gt;&quot;),     # versioning     date = &quot;2014-03-02&quot;,      version = &quot;1.0.0&quot;,     url = &quot;http://foo.bar/&quot;,     # data design     panel = c(&quot;cid&quot;, &quot;cname&quot;, &quot;ccodecow&quot;),     format = c(cid = &quot;iso3c&quot;, cname = &quot;name&quot;, ccodecow = &quot;cow&quot;),     time = c(&quot;year&quot;),     date = c(&quot;%Y&quot;)     )</code></p>
 <blockquote>
 <p><strong>Note</strong>: this needs to be further inspired by <a href="http://dataprotocols.org/data-packages/#required-fields">DataPackage</a>, and exportable to it, with the help of <code>rjson</code>, <code>RJSONIO</code> or <code>rjsonlite</code>.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note</strong>: it would be desirable to add the capabilities to generate BibTex citations for the data sets, similar to <code>citation</code>. Ideally, you could run this on a <code>psdata</code> object that was composed of data merged from multiple sources and it would retun citations for each source.</p>
 </blockquote>
 <p>In this example, <code>cid</code> and <code>cname</code> code for the same (country) variable, but they could have specific roles set by an additional <code>level</code> attribute:</p>
 <p><code>{S} list(     ...     # dyadic data design     panel = c(&quot;aggressor&quot;, &quot;target&quot;),     level = c(aggressor = &quot;dyad1&quot;, target = &quot;dyad2&quot;),     format = c(aggressor = &quot;polity&quot;, target = &quot;polity&quot;),     time = c(&quot;year&quot;),     date = c(&quot;%Y&quot;)     ) list(     ...     # multilevel data design     panel = c(&quot;country&quot;, &quot;region&quot;),     level = c(country = &quot;level2&quot;, region = &quot;level1&quot;),     format = c(country = &quot;eurostat&quot;, region = &quot;nuts2&quot;),     time = c(&quot;year&quot;),     date = c(&quot;%Y&quot;)     )</code></p>
@@ -154,7 +157,7 @@ format = &quot;%Y&quot;</code></pre>
 <h3 id="naming">Naming</h3>
 <ul>
 <li><p>Package names: modified camelCase where the first word is lower case and following words begin with a capital letter. Words are not separated. For example: ‘psData’.</p></li>
-<li><p>Classes: all lowercase, no separators. For example&quot; <code>psdata</code>.</p></li>
+<li><p>Classes: all lowercase, no separators. For example: <code>psdata</code>.</p></li>
 <li><p>Methods, function names, and arguments: all lowercase, with words separated by an underscore <code>_</code>. For example: ‘get_data’.</p></li>
 <li><p>Object names in documentation and object names internal to the functions: all lowercase, with words separated by periods. For example, ‘qog.data’.</p></li>
 </ul>

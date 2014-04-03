@@ -52,7 +52,7 @@ The public can send [issues and bug reports]((https://github.com/ropengov/sorvi/
 Automated build reports (Travis)
 --------------------------
 
-You can generate automated build reports for the package with [Travis](https://travis-ci.org/rOpenGov/sorvi):  add the [.travis.yml](https://github.com/rOpenGov/sorvi/blob/master/.travis.yml) script in your package root, and we will take of the rest. You can then check the build report for your package at https://travis-ci.org/rOpenGov/<yourpackagename>
+You can generate automated build reports for the package with [Travis](https://travis-ci.org/rOpenGov/sorvi):  add the [.travis.yml](https://github.com/rOpenGov/sorvi/blob/master/.travis.yml) script in your package root, and we will take of the rest. You can then check the build report for your package at https://travis-ci.org/rOpenGov/yourpackagename
 
 You can also automatically add the latest package build status in your package [README](https://github.com/rOpenGov/sorvi/blob/master/README.md).
 
@@ -92,7 +92,7 @@ Bioconductor. Instructions to be added.
 Package formatting
 ---------------
 
-1. Follow an R style guide, or use formatR
+1. Follow an R style guide (e.g. [Hadley's guide](http://adv-r.had.co.nz/Style.html)), or use formatR
 1. Cite relevant methods and packages throughout package documentation
 1. Avoid duplicating functionality available in other packages.
 1. Use INCLUDE instead of DEPENDS for packages that provide functions purely for internal use 

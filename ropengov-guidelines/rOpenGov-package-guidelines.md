@@ -17,6 +17,7 @@ We recommend following the related package guidelines:
 
   * [Writing R Extensions manual](http://cran.r-project.org/doc/manuals/R-exts.html)
   * [Bioconductor guidelines](http://bioconductor.org/developers/package-guidelines/)
+  * [JTLeek instructions for R packages](https://github.com/jtleek/rpackages)
   * [rOpenSci guidelines](https://github.com/ropensci/rOpenSci/wiki/_pages)
   * [Advanced R programming](http://adv-r.had.co.nz/) site
 

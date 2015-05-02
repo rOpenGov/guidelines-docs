@@ -31,12 +31,6 @@ before pushing changes to the master branch. With a small delay, the build repor
 
 **Release version** Release version of the package should go to [CRAN](http://cran.r-project.org/submit.html). 
 
-
-Package development workflow
------------------------------------
-
-In general, we follow the [rOpenSci guidelines](https://github.com/ropensci/rOpenSci/wiki/rOpenSci-Workflow-Document).  
-
 The public can send [issues and bug reports]((https://github.com/ropengov/sorvi/issues)), [pull requests](https://github.com/louhos/sorvi/) etc. through Github. 
 
 

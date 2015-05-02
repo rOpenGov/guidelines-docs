@@ -59,4 +59,4 @@ Specify one or more ropengov task-view categories in your DESCRIPTION file. When
 Network traffic statistics
 ----------------------------
 
-Follow the package traffic statistics at your github site. See for instance the traffic analysis for [sorvi](https://github.com/rOpenGov/sorvi/graphs/rtaffic).
+Follow the package traffic statistics at your github site. See for instance the traffic analysis for [sorvi](https://github.com/rOpenGov/sorvi/graphs/traffic).
